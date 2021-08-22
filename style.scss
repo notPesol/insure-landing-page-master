@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+$DarkViolet: hsl(256, 26%, 20%);
+$GrayishBlue: hsl(216, 30%, 68%);
+
+$VeryDarkViolet: hsl(270, 9%, 17%);
+$DarkGrayishViolet: hsl(273, 4%, 51%);
+$VeryLightGray: hsl(0, 0%, 98%);
+
+$maxWidth: 1280px;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: $DarkViolet;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+nav {
+  max-width: $maxWidth;
+  margin: 15px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+
+  .logo {
+    display: flex;
+  }
+
+  .links {
+    a {
+      color: $DarkGrayishViolet;
+      margin-right: 10px;
+      font-weight: 700;
+      &:hover {
+        color: $DarkViolet;
+      }
+    }
+    button {
+      padding: 10px 20px;
+      background-color: $VeryLightGray;
+      color: $DarkViolet;
+      border-color: $DarkViolet;
+      text-transform: uppercase;
+      font-weight: 600;
+      cursor: pointer;
+      &:hover {
+        background-color: $DarkViolet;
+        color: $VeryLightGray;
+      }
+    }
+  }
+}
+
+section {
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 100px;
+  h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: 4rem;
+    line-height: 4rem;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  h2 {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+}
+
+.section-1 {
+  background-color: $DarkViolet;
+  .content {
+    margin: 0 auto;
+    max-width: $maxWidth;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      flex-direction: column-reverse;
+    }
+
+    .text-1 {
+      padding: 20px;
+      width: 50%;
+      @media screen and (max-width: 768px) {
+        width: auto;
+      }
+      h1 {
+        color: $VeryLightGray;
+        margin-bottom: 20px;
+        font-weight: 400;
+      }
+      p {
+        color: $VeryLightGray;
+        line-height: 24px;
+        margin-bottom: 25px;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: $DarkViolet;
+        color: $VeryLightGray;
+        border-color: $DarkViolet;
+        text-transform: uppercase;
+        font-weight: 600;
+        cursor: pointer;
+        border-color: $VeryLightGray;
+        margin-bottom: 50px;
+        &:hover {
+          background-color: $VeryLightGray;
+          color: $DarkViolet;
+        }
+      }
+    }
+
+    .image {
+      position: relative;
+      top: 100px;
+      @media screen and (max-width: 768px) {
+        position: static;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.section-2 {
+  .content {
+    max-width: $maxWidth;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+
+    .head {
+      margin: 50px 0;
+    }
+
+    .icon {
+      display: flex;
+      @media screen and (max-width: 768px) {
+        display: block;
+        text-align: center;
+        padding: 0 20px;
+      }
+      .icon-box {
+        margin-right: 20px;
+        margin-bottom: 20px;
+
+        .img {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+.section-3 {
+  .content {
+    color: $VeryLightGray;
+    background-color: $DarkViolet;
+    padding: 50px 70px;
+    display: flex;
+    align-items: center;
+    max-width: $maxWidth;
+    margin: 0 auto;
+    justify-content: space-between;
+    @media screen and (max-width: 768px) {
+      display: block;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      width: 50%;
+      font-size: 3.5rem;
+      color: $VeryLightGray;
+
+      @media screen and (max-width: 768px) {
+        width: auto;
+      }
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: $DarkViolet;
+      color: $VeryLightGray;
+      border-color: $DarkViolet;
+      text-transform: uppercase;
+      font-weight: 600;
+      cursor: pointer;
+      border-color: $VeryLightGray;
+      &:hover {
+        background-color: $VeryLightGray;
+        color: $DarkViolet;
+      }
+    }
+  }
+}
+
+footer {
+  margin: 0 auto;
+  max-width: $maxWidth;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  @media screen and (max-width: 768px) {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-menu {
+    .title {
+      color: $DarkGrayishViolet;
+      margin-bottom: 20px;
+    }
+    p {
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    @media screen and (max-width: 768px) {
+      margin-bottom: 40px;
+      margin-right: 0;
+    }
+  }
+}
+
+// - Family: [Karla](https://fonts.google.com/specimen/Karla)
+// - Weights: 400, 700
+
+// ## Icons
+// You can use either use the social icons provided or load in a font icon library. Some library suggestions can be found below:
+// - [Font Awesome](https://fontawesome.com)
+// - [IcoMoon](https://icomoon.io)
+// - [Ionicons](https://ionicons.com)
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
